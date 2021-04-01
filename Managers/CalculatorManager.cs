@@ -33,13 +33,5 @@ namespace Calculator.API.Managers
 
             return result; 
         }
-
-        public OperationResult CalculateWithColor(Operations operations)
-        {
-            var baseResult = Calculate(operations) ;
-            var newResult = new OperationResultWithColor(baseResult);
-            newResult.Color = newResult.Result % 2 == 0 ? "green" : "red";
-            return newResult;
-        }
     }
 }
